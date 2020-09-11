@@ -1,7 +1,7 @@
 Summary:	Tool for creating Python bindings for Qt
 Name:		python-sip-qt5
 Version:	12.8.1
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	GPLv2+
 Url:		http://www.riverbankcomputing.co.uk/software/sip/intro
@@ -25,7 +25,7 @@ create bindings for any C or C++ library.
 
 %build
 %set_build_flags
-export LDFLAGS="%{ldflags} -lpython3.8"
+export LDFLAGS="%{ldflags} -lpython%{py_ver}"
 
 python setup.py \
 	build
