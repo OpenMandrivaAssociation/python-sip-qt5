@@ -10,7 +10,7 @@ BuildRequires:	pkgconfig(python3)
 BuildRequires:	python-sip >= 1:5.0.0
 # FIXME why is this not autodetected?
 Provides:	python3.9dist(pyqt5-sip) = %{version}
-Rrovides:	python3dist(pyqt5-sip) = %{version}
+Provides:	python3dist(pyqt5-sip) = %{version}
 
 %description
 SIP is a tool that makes it very easy to create Python bindings
