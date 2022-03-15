@@ -7,7 +7,7 @@ License:	GPLv2+
 Url:		http://www.riverbankcomputing.co.uk/software/sip/intro
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt5_sip/PyQt5_sip-%{version}.tar.gz
 BuildRequires:	pkgconfig(python3)
-BuildRequires:	python-sip >= 1:6.5.0
+BuildRequires:	python-sip 
 # FIXME why is this not autodetected?
 Provides:	python3.11dist(pyqt5-sip) = %{version}
 Provides:	python3dist(pyqt5-sip) = %{version}
