@@ -24,7 +24,7 @@ create bindings for any C or C++ library.
 %autosetup -p1 -n PyQt5_sip-%{version}
 # Some c files are pre-built with an outdated (and incompatible with
 # python 3.11) version of cython -- rebuild them
-cd sip-qt5
+cd PyQt5_sip
 cython _quoting_c.pyx
 # Not sure if this is a bug in cython or in python itself -- PyFrameObject
 # is being used, but the header defining it isn't pulled in.
