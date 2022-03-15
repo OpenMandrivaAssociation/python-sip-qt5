@@ -23,6 +23,15 @@ create bindings for any C or C++ library.
 #------------------------------------------------------------
 %prep
 %autosetup -p1 -n PyQt5_sip-%{version}
+# Some c files are pre-built with an outdated (and incompatible with
+# python 3.11) version of cython -- rebuild them
+cd sip
+cython _quoting_c.pyx
+# Not sure if this is a bug in cython or in python itself -- PyFrameObject
+# is being used, but the header defining it isn't pulled in.
+# Either way it's easily fixable by doing something not very nice -- patching
+# precompiled code
+sed -i -e '/#include "Python.h"/a#include "internal/pycore_frame.h"' _quoting_c.c
 
 %build
 %set_build_flags
