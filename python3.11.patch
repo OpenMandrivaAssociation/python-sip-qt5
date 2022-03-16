@@ -1,0 +1,18 @@
+diff -up PyQt5_sip-12.9.1/siplib.c.py311 PyQt5_sip-12.9.1/siplib.c
+--- PyQt5_sip-12.9.1/siplib.c.py311	2022-02-01 08:29:23.000000000 -0500
++++ PyQt5_sip-12.9.1/siplib.c	2022-03-11 20:46:19.056212494 -0500
+@@ -12750,7 +12750,14 @@ static struct _frame *sip_api_get_frame(
+ 
+     while (frame != NULL && depth > 0)
+     {
++#if PY_VERSION_HEX < 0x03090000
+         frame = frame->f_back;
++#else
++        frame = PyFrame_GetBack(frame);
++
++        /* Historically we return a borrowed reference. */
++        Py_XDECREF(frame);
++#endif
+         --depth;
+     }
+ 
