@@ -21,7 +21,6 @@ create bindings for any C or C++ library.
 
 %files -f %{name}.list
 
-#------------------------------------------------------------
 %prep
 %autosetup -p1 -n PyQt5_sip-%{version}
 
