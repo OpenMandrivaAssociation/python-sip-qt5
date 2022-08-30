@@ -1,12 +1,11 @@
 Summary:	Tool for creating Python bindings for Qt
 Name:		python-sip-qt5
-Version:	12.9.1
-Release:	2
+Version:	12.11.0
+Release:	1
 Group:		Development/Python
 License:	GPLv2+
 Url:		http://www.riverbankcomputing.co.uk/software/sip/intro
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt5_sip/PyQt5_sip-%{version}.tar.gz
-Patch0:		https://src.fedoraproject.org/rpms/python-pyqt5-sip/raw/rawhide/f/python3.11.patch
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python-sip >= 6.5.0
 # FIXME why is this not autodetected?
@@ -26,7 +25,7 @@ create bindings for any C or C++ library.
 
 %build
 %set_build_flags
-export LDFLAGS="%{ldflags} -lpython%{py_ver}"
+export LDFLAGS="%{build_ldflags} -lpython%{py_ver}"
 
 python setup.py \
 	build
