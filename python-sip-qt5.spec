@@ -1,6 +1,6 @@
 Summary:	Tool for creating Python bindings for Qt
 Name:		python-sip-qt5
-Version:	12.12.0
+Version:	12.13.0
 Release:	1
 Group:		Development/Python
 License:	GPLv2+
@@ -9,7 +9,7 @@ Source0:	https://files.pythonhosted.org/packages/source/P/PyQt5_sip/PyQt5_sip-%{
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python-sip >= 6.5.0
 # FIXME why is this not autodetected?
-Provides:	python3.11dist(pyqt5-sip) = %{version}
+Provides:	python%{py_ver}dist(pyqt5-sip) = %{version}
 Provides:	python3dist(pyqt5-sip) = %{version}
 
 %description
