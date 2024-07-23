@@ -1,6 +1,6 @@
 Summary:	Tool for creating Python bindings for Qt
 Name:		python-sip-qt5
-Version:	12.13.0
+Version:	12.15.0
 Release:	1
 Group:		Development/Python
 License:	GPLv2+
