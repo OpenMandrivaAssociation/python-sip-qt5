@@ -4,7 +4,7 @@ Version:	12.15.0
 Release:	1
 Group:		Development/Python
 License:	GPLv2+
-Url:		http://www.riverbankcomputing.co.uk/software/sip/intro
+Url:		https://www.riverbankcomputing.co.uk/software/sip/intro
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt5_sip/PyQt5_sip-%{version}.tar.gz
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python-sip >= 6.5.0
